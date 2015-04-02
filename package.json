@@ -1,0 +1,21 @@
+{
+  "name": "axcess_worldwide",
+  "description": "Axcess Worldwide mockup.",
+  "version": "0.0.1",
+  "homepage": "axcessworldwide.com",
+  "repo": {
+    "type": "git",
+    "url": "github.com/BadKids/bad_kids_theme"
+  },
+  "private": true,
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.1.x"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.7.0"
+  }
+}
