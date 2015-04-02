@@ -1,11 +1,11 @@
 define(
-  [ 'controller' ],
-  function( Controller ) {
+  [ 'views/app' ],
+  function( AppView ) {
     'use strict';
 
     return {
       init: function() {
-        new Controller();
+        new AppView( { el: $( 'body' ) } );
       }
     };
   }
