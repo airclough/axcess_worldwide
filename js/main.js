@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/js',
+  baseUrl: 'js',
   paths: {
     backbone  : '../bower_components/backbone/backbone',
     d3        : '../bower_components/d3/d3',

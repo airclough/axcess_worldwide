@@ -1,16 +1,17 @@
 define(
-  [ 'backbone' ],
-  function( Backbone ) {
+  [ 'backbone',
+    'views/slider-controller' ],
+  function( Backbone, SliderController ) {
     'use strict';
 
     return Backbone.View.extend({
       initialize: function() {
         this.subviews = {};
 
-        this._createViews();
+        this._createSubviews();
       },
 
-      _createViews: function() {
+      _createSubviews: function() {
         this.subviews.sliderController = new SliderController( { el: this.$el.find( '.slider' ) } );
         return this;
       }
