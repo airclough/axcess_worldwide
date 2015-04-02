@@ -34,102 +34,51 @@ body {
 }
 
 /**
- * grid
+ * jumbotron
  */
- .row {
-   width: 100%;
- }
+.jumbotron {
+  height: 100%;
+  position: relative;
+}
 
- .row:before,
- .row:after {
-   content: " ";
-   display: table;
- }
+.jumbotron nav {
+  height: 100%;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(34,34,34,0.8);
+}
 
- .row:after {
-   clear: both;
- }
+.jumbotron nav div {
+  position: relative;
+  height: 20%;
+  color: #999999;
+  font-weight: 300;
+  text-align: center;
+  line-height: 32px;
+}
 
- .container.row {
-   margin: 0 -16px;
- }
+.jumbotron nav div.active {
+  color: #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+}
 
- .col-1,
- .col-2,
- .col-3,
- .col-4,
- .col-5,
- .col-6,
- .col-7,
- .col-8,
- .col-9,
- .col-10,
- .col-11,
- .col-12 {
-   position: relative;
-   min-height: 1px;
-   float: left;
- }
+.jumbotron nav div:hover {
+  color: #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  cursor: pointer;
+}
 
- .container.row > .col-1,
- .container.row > .col-2,
- .container.row > .col-3,
- .container.row > .col-4,
- .container.row > .col-5,
- .container.row > .col-6,
- .container.row > .col-7,
- .container.row > .col-8,
- .container.row > .col-9,
- .container.row > .col-10,
- .container.row > .col-11,
- .container.row > .col-12 {
-   padding: 0 16px;
- }
-
- .col-12 {
-   width: 100%;
- }
-
- .col-11 {
-   width: 91.66666667%;
- }
-
- .col-10 {
-   width: 83.33333333%;
- }
-
- .col-9 {
-   width: 75%;
- }
-
- .col-8 {
-   width: 66.66666667%;
- }
-
- .col-7 {
-   width: 58.33333333%;
- }
-
- .col-6 {
-   width: 50%;
- }
-
- .col-5 {
-   width: 41.66666667%;
- }
-
- .col-4 {
-   width: 33.33333333%;
- }
-
- .col-3 {
-   width: 25%;
- }
-
- .col-2 {
-   width: 16.66666667%;
- }
-
- .col-1 {
-   width: 8.33333333%;
- }
+.jumbotron nav div span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%) rotate(270deg);
+     -moz-transform: translateY(-50%) rotate(270deg);
+      -ms-transform: translateY(-50%) rotate(270deg);
+       -o-transform: translateY(-50%) rotate(270deg);
+          transform: translateY(-50%) rotate(270deg);
+}
