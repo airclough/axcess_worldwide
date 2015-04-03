@@ -166,6 +166,93 @@ header {
   opacity: 1;
 }
 
+.jumbotron .slider .slide .info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.jumbotron .slider .slide .info .brands {
+  opacity: 0;
+  margin-bottom: 16px;
+  -webkit-transform: translateY(16px);
+     -moz-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+       -o-transform: translateY(16px);
+          transform: translateY(16px);
+  -webkit-transition: -webkit-transform, opacity, .5s;
+     -moz-transition: -moz-transform, opacity, .5s;
+      -ms-transition: -ms-transform, opacity, .5s;
+       -o-transition: -o-transform, opacity, .5s;
+          transition: transform, opacity, .5s;
+  -webkit-transition-delay: .5s;
+     -moz-transition-delay: .5s;
+       -o-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.jumbotron .slider .slide.current .info .brands {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.jumbotron .slider .slide .info .brands .brand {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.jumbotron .slider .slide .info .brands .amp {
+  color: #999999;
+  font-weight: 300;
+}
+
+.jumbotron .slider .slide .info .description {
+  opacity: 0;
+  color: #999999;
+  -webkit-transform: translateY(16px);
+     -moz-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+       -o-transform: translateY(16px);
+          transform: translateY(16px);
+  -webkit-transition: -webkit-transform, opacity, .5s;
+     -moz-transition: -moz-transform, opacity, .5s;
+      -ms-transition: -ms-transform, opacity, .5s;
+       -o-transition: -o-transform, opacity, .5s;
+          transition: transform, opacity, .5s;
+  -webkit-transition-delay: .75s;
+     -moz-transition-delay: .75s;
+       -o-transition-delay: .75s;
+          transition-delay: .75s;
+}
+
+.jumbotron .slider .slide.current .info .description {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.jumbotron .slider .slide .info .description p {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .jumbotron .slider .slide .bg-img {
   position: absolute;
   top: 0;

@@ -66,7 +66,7 @@ define(
           that.next.transition();
           that._onShift( that.slides.push( that.slides.shift() ) );
           that._next()
-        }, 5000 );
+        }, 10000 );
       }
     });
   }

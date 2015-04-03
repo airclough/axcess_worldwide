@@ -20,12 +20,16 @@ define(
 
       _template: function( model ) {
         return ''
-          + '<div class="brands">'
-            + '<div class="brand">' + model.brands[ 0 ] + '</div>'
-            + '<div class="amp">&</div>'
-            + '<div class="brand">' + model.brands[ 1 ] + '</div>'
+          + '<div class="info">'
+            + '<div class="brands">'
+              + '<div class="brand">' + model.brands[ 0 ] + '</div>'
+              + '<div class="amp">&</div>'
+              + '<div class="brand">' + model.brands[ 1 ] + '</div>'
+            + '</div>'
+            + '<div class="description">'
+              + '<p>' + model.description + '</p>'
+            + '</div>'
           + '</div>'
-          + '<div class="description">' + model.description + '</div>'
           + '<div class="bg-img" style="background-image: url(\'img/' + model.img + '\');"></div>';
       },
 
