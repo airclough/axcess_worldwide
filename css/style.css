@@ -20,7 +20,8 @@ body {
  * resets
  */
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
@@ -378,39 +379,85 @@ header {
 }
 
 .headline h2 {
+  position: relative;
+  margin-bottom: 8px;
   font-size: 2em;
   font-weight: 300;
   text-align: right;
   text-transform: uppercase;
-  line-height: 48px;
 }
 
 .headline h2 span {
   font-weight: 800;
 }
 
+.headline h3 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.headline h3 a {
+  color: #9B59B6;
+}
+
 .headline .brand-partners {
   display: inline-block;
-  height: 48px;
-  padding: 0 16px;
+  padding: 16px;
   color: #FFFFFF;
   font-weight: 300;
   text-transform: uppercase;
-  line-height: 48px;
-  background: #B2B2B2;
-  background: rgba(178,178,178,1);
-  background: -moz-linear-gradient(top, rgba(178,178,178,1) 0%, rgba(153,153,153,1) 100%);
-  background: -webkit-gradient(top, bottom, color-stop(0%, rgba(178,178,178,1)), color-stop(100%, rgba(153,153,153,1)));
-  background: -webkit-linear-gradient(top, rgba(178,178,178,1) 0%, rgba(153,153,153,1) 100%);
-  background: -o-linear-gradient(top, rgba(178,178,178,1) 0%, rgba(153,153,153,1) 100%);
-  background: -ms-linear-gradient(top, rgba(178,178,178,1) 0%, rgba(153,153,153,1) 100%);
-  background: linear-gradient(to bottom, rgba(178,178,178,1) 0%, rgba(153,153,153,1) 100%);
-  border: 1px solid #999999;
+  background: #9B59B6;
+  border: 1px solid #844C9C;
   border-radius: 8px;
 }
 
 .headline .brand-partners:hover {
+  background: #8F52A8;
   cursor: pointer;
+}
+
+.who-is {
+  position: relative;
+  padding: 64px 0;
+  background: #E5E5E5;
+}
+
+.who-is .row > div {
+
+}
+
+.who-is .img-holder {
+  margin: 0 auto 16px auto;
+  height: 240px;
+  width: 240px;
+  max-width: 240px;
+  color: #CCCCCC;
+  text-align: center;
+  line-height: 240px;
+  border: 1px dashed #CCCCCC;
+}
+
+.who-is .caption {
+  font-weight: 300;
+  text-align: center;
+}
+
+.who-is .fine {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: #999999;
+  font-size: 12px;
+}
+
+footer .fine {
+  padding: 16px;
+  color: #999999;
+  font-size: 12px;
+  text-align: right;
+  background: #000000;
 }
 
 /**
