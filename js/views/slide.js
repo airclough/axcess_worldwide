@@ -29,6 +29,7 @@ define(
             + '<div class="description">'
               + '<p>' + model.description + '</p>'
             + '</div>'
+            + '<div class="learn-more">learn more</div>'
           + '</div>'
           + '<div class="bg-img" style="background-image: url(\'img/' + model.img + '\');"></div>';
       },
