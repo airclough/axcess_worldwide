@@ -1,18 +1,19 @@
 define(
   [ 'backbone',
-    'collections/slides' ],
+    'collections/slides',
+    'views/slide' ],
   function( Backbone, SlidesCollection, SlideView ) {
     'use strict';
 
     var slides = [
       {
-        brands: [ 'Beats', 'Graff' ]
-        description: 'A luxury icon, a disruptive brand, and a partnership to create a product launched on the world’s biggest stage.',
-        img: 'img/beats.jpg'
+        brands: [ 'Beats', 'Graff' ],
+        description: 'A luxury icon, a disruptive brand, and a partnership to create a product launched on the world\'s biggest stage.',
+        img: 'beats.jpg'
       },
       {
         brands: [ 'Tequila Avión', 'Delta Air Lines' ],
-        description: 'The world’s finest tequila, the world’s largest airline, and a partnership to elevate the Delta Sky Club and overall flying experience.',
+        description: 'The world\'s finest tequila, the world\'s largest airline, and a partnership to elevate the Delta Sky Club and overall flying experience.',
         img: 'avion.jpg'
       }
     ];
@@ -20,6 +21,7 @@ define(
     return Backbone.View.extend({
       initialize: function() {
         this.collection = new SlidesCollection( slides );
+        this.slides = [];
 
         this._eachSlide()
           ._createSubviews()
@@ -31,7 +33,9 @@ define(
         var that = this;
 
         this.collection.each( function( slide, i ) {
-          that.views[ 'slide' + i ] = new SlideView( { model: slide } );
+          var slideView = new SlideView( { model: slide } );
+          that.$el.append( slideView.el );
+          that.slides.push( slideView );
         });
 
         return that;
@@ -46,21 +50,21 @@ define(
         return this;
       },
 
-      _onShift: function( opts ) {
-        console.log( opts );
+      _onShift: function() {
         this.current.setPosition( 'off' );
       },
 
       _next: function() {
         var that = this;
 
-        ( that.current = that.collection.at( 0 ) ).setPosition( 'current' );
-        ( that.next = that.collection.at( 1 ) ).setPosition( 'next' );
+        ( that.current = that.slides[ 0 ] ).setPosition( 'current' );
+        if( !that.next ) that.current.transition();
+        ( that.next = that.slides[ 1 ] ).setPosition( 'next' );
 
         setTimeout( function() {
           that.current.transition();
           that.next.transition();
-          that.collection.push( that.collection.shift() );
+          that._onShift( that.slides.push( that.slides.shift() ) );
           that._next()
         }, 5000 );
       }

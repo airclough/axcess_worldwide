@@ -26,7 +26,7 @@ define(
             + '<div class="brand">' + model.brands[ 1 ] + '</div>'
           + '</div>'
           + '<div class="description">' + model.description + '</div>'
-          + '<div class="bg-img">' + model.img + '</div>';
+          + '<div class="bg-img" style="background-image: url(\'img/' + model.img + '\');"></div>';
       },
 
       _subscribe: function() {
