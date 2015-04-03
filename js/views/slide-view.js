@@ -9,7 +9,8 @@ define(
       className: 'slide',
 
       initialize: function() {
-        this.render();
+        this.render()
+          ._subscribe();
       },
 
       render: function() {
@@ -26,6 +27,26 @@ define(
           + '</div>'
           + '<div class="description">' + model.description + '</div>'
           + '<div class="bg-img">' + model.img + '</div>';
+      },
+
+      _subscribe: function() {
+        this.listenTo( this.model, 'change:position', this._onPositionChange );
+        return this;
+      },
+
+      _onPositionChange: function() {
+        var position = this.model.get( 'position' );
+        if( 'next' === position ) return false;
+        this.$el.css( 'z-index', 'current' === position ? 1 : 0 );
+      },
+
+      setPosition: function( position ) {
+        this.model.set( 'position', position );
+      },
+
+      transition: function() {
+        var position = [ 'current', 'next' ];
+        this.$el.toggleClass( 'current', +position[ this.model.get( 'position' ) ] );
       }
     });
   }

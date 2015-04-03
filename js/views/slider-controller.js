@@ -23,6 +23,7 @@ define(
 
         this._eachSlide()
           ._createSubviews()
+          ._subscribe()
           ._next();
       },
 
@@ -38,6 +39,16 @@ define(
 
       _createSubviews: function() {
         return this;
+      },
+
+      _subscribe: function() {
+        this.listenTo( this.collection, 'remove', this._onShift );
+        return this;
+      },
+
+      _onShift: function( opts ) {
+        console.log( opts );
+        this.current.setPosition( 'off' );
       },
 
       _next: function() {
