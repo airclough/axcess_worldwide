@@ -62,8 +62,9 @@ header {
 
 .jumbotron .logo {
   position: absolute;
-  top: 64px;
+  top: 32px;
   left: 50%;
+  width: 100%;
   z-index: 10;
   -webkit-transform: translateX(-50%);
      -moz-transform: translateX(-50%);
@@ -74,7 +75,8 @@ header {
 
 .jumbotron .logo img {
   display: block;
-  margin-bottom: 16px;
+  height: 64px;
+  margin: 0 auto 16px auto;
 }
 
 .jumbotron .logo h1,
@@ -312,7 +314,7 @@ header {
 
 .jumbotron .slider .dots {
   position: absolute;
-  bottom: 64px;
+  bottom: 32px;
   left: 50%;
   z-index: 10;
   -webkit-transform: translateX(-50%);

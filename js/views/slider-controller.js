@@ -16,6 +16,11 @@ define(
         brands: [ 'Tequila Avión', 'Delta Air Lines' ],
         description: 'The world\'s finest tequila, the world\'s largest airline, and a partnership to elevate the Delta Sky Club and overall flying experience.',
         img: 'avion.jpg'
+      },
+      {
+        brands: [ 'The Venetian', 'IHG' ],
+        description: 'The world\'s largest luxury resort, the world\'s largest hotel company, and a partnership to disrupt the world\'s largest industry.',
+        img: 'venetian.jpg'
       }
     ];
 
