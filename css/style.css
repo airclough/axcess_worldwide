@@ -8,7 +8,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #222222;
@@ -21,7 +21,9 @@ body {
  */
 h1,
 h2,
-h3 {
+h3,
+ul,
+li {
   margin: 0;
 }
 
@@ -44,6 +46,10 @@ img {
 
 .clearfix {
   *zoom: 1;
+}
+
+a {
+  color: #9B59B6;
 }
 
 /**
@@ -89,7 +95,7 @@ header {
 
 .jumbotron .logo h1 {
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 4px;
 }
 
@@ -215,7 +221,7 @@ header {
 .jumbotron .slider .slide .info .brands .brand {
   color: #FFFFFF;
   font-size: 4em;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -388,7 +394,7 @@ header {
 }
 
 .headline h2 span {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .headline h3 {
@@ -396,10 +402,6 @@ header {
   font-weight: 300;
   text-align: right;
   text-transform: uppercase;
-}
-
-.headline h3 a {
-  color: #9B59B6;
 }
 
 .headline .brand-partners {
@@ -444,16 +446,37 @@ header {
   text-align: center;
 }
 
-.who-is .fine {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  color: #999999;
-  font-size: 12px;
+.about {
+  padding: 64px;
+}
+
+.about a {
+  color:
+}
+
+.about h2 {
+  margin-bottom: 8px;
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.about h3 {
+  margin-bottom: 64px;
+  color: #666666;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.about h3.bullets {
+  margin-bottom: 8px;
+  color: #222222;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 
 footer .fine {
-  padding: 16px;
+  padding: 16px 64px;
   color: #999999;
   font-size: 12px;
   text-align: right;
