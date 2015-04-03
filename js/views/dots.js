@@ -1,6 +1,7 @@
 define(
-  [ 'backbone' ],
-  function( Backbone ) {
+  [ 'backbone',
+    'views/dot' ],
+  function( Backbone, DotView ) {
     'use strict';
 
     return Backbone.View.extend({

@@ -45,6 +45,7 @@ define(
 
       _createSubviews: function() {
         this.subviews.dots = new DotsView( { collection: this.collection } );
+        this.$el.append( this.subviews.dots.el );
         return this;
       },
 

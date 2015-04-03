@@ -309,3 +309,34 @@ header {
   width: 100%;
   background: #000000;
 }
+
+.jumbotron .slider .dots {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.jumbotron .slider .dots .dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-right: 16px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  -webkit-transition: height, width, .5s;
+     -moz-transition: height, width, .5s;
+      -ms-transition: height, width, .5s;
+       -o-transition: height, width, .5s;
+          transition: height, width, .5s;
+}
+
+.jumbotron .slider .dots .dot.active {
+  height: 16px;
+  width: 16px;
+}
