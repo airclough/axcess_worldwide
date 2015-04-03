@@ -1,8 +1,9 @@
 define(
   [ 'backbone',
     'collections/slides',
-    'views/slide' ],
-  function( Backbone, SlidesCollection, SlideView ) {
+    'views/slide',
+    'views/dots' ],
+  function( Backbone, SlidesCollection, SlideView, DotsView ) {
     'use strict';
 
     var slides = [
@@ -21,6 +22,7 @@ define(
     return Backbone.View.extend({
       initialize: function() {
         this.collection = new SlidesCollection( slides );
+        this.subviews = {};
         this.slides = [];
 
         this._eachSlide()
@@ -42,6 +44,7 @@ define(
       },
 
       _createSubviews: function() {
+        this.subviews.dots = new DotsView( { collection: this.collection } );
         return this;
       },
 
